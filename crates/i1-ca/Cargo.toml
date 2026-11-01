@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 description = "Certificate Authority for i1.is - air-gapped root, online intermediates"
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/i1-is/i1"
+repository = "https://github.com/8b-is/i1-cli.git"
 
 [dependencies]
 # Certificate generation (pure Rust, no OpenSSL)

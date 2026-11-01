@@ -30,8 +30,8 @@ i1 defend community contribute --fail2ban
 
 ```bash
 # Build from source
-git clone https://github.com/8b-is/i1
-cd i1
+git clone https://github.com/8b-is/i1-cli.git
+cd i1-cli
 cargo build --release
 
 # Works immediately - no keys needed
@@ -222,6 +222,22 @@ i1 dns resolve example.com      # DNS lookup
 ```
 
 ---
+
+## Repository Layout
+
+This repository is [8b-is/i1-cli](https://github.com/8b-is/i1-cli.git), the Rust workspace for the `i1` CLI. The separate [8b-is/i1-core](https://github.com/8b-is/i1-core.git) repository is the documentation hub, **not** the Rust `i1-core` library crate. The library crate lives here at `crates/i1-core` and keeps its existing name.
+
+When working across the i1 repositories, use independent sibling checkouts, not nested submodules:
+
+```text
+/parent/
+├── i1-core/        # Documentation hub
+├── i1-cli/         # This Rust workspace (contains crates/i1-core/)
+├── i1-dns/         # DNS repository
+└── i1-is/          # Installer/web service
+```
+
+Only the `i1-cli` checkout is needed to build this workspace. Run Cargo commands from that checkout, not from the documentation hub.
 
 ## Architecture
 

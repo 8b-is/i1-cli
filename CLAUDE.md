@@ -6,6 +6,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **i1** - Multi-provider security operations CLI for the i1.is platform. Aggregates threat intelligence from Shodan, Censys, and Criminal IP with local recon (WHOIS, DNS). Includes automated defense: log-based patrol, fleet sync via SSH, community blocklist sharing, honeypot generation, and certificate authority infrastructure. **No API keys required** for basic operation.
 
+## Repository Layout and Naming
+
+This repository is [8b-is/i1-cli](https://github.com/8b-is/i1-cli.git), the Rust workspace that builds the `i1` binary. The separate [8b-is/i1-core](https://github.com/8b-is/i1-core.git) repository is the documentation hub, **not** the Rust `i1-core` library crate. That crate remains here at `crates/i1-core`; do not rename it or redirect its path dependencies to the hub.
+
+Keep related repositories as independent sibling checkouts: `/parent/i1-core`, `/parent/i1-cli`, `/parent/i1-dns`, and `/parent/i1-is`. They are not nested submodules. Run Cargo commands from `/parent/i1-cli`; building this workspace does not require cloning the sibling repositories.
+
 ## Build Commands
 
 ```bash

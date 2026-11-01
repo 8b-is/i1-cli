@@ -22,7 +22,7 @@ version = "0.1.0"
 edition = "2021"
 rust-version = "1.75"
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/8b-is/i1"
+repository = "https://github.com/8b-is/i1-cli.git"
 keywords = ["security", "reconnaissance", "osint", "threat-intelligence", "i1"]
 categories = ["network-programming", "api-bindings"]
 
