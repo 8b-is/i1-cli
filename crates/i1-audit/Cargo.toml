@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 description = "Zero-trust binary & certificate audit system for i1.is"
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/i1-is/i1"
+repository = "https://github.com/8b-is/i1-cli.git"
 keywords = ["security", "audit", "trust", "binary-analysis", "certificates"]
 categories = ["command-line-utilities", "network-programming"]
 
